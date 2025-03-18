@@ -1,0 +1,224 @@
+
+/*
+* Global CSS Styles
+* Version: 1.0.0
+* Description: Main stylesheet containing theme variables and global styles
+*/
+
+/* Tailwind Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============================================
+=            Global Theme Variables            =
+=============================================*/
+:root {
+  /* Main Theme Colors */
+  --primary-color: #18b7be;
+  --secondary-color: #178ca4;
+  --accent-color: #072a40;
+  --highlight-accent-color: #0a3b5a;
+  --background-color: #f9f7f0;
+  --text-color: #072a40;
+
+  /* Interactive Elements */
+  --link-color: #178ca4;
+  --link-hover-color: #18b7be;
+
+  /* Status Colors - Adjusted to match theme */
+  --error-color: #d64045;
+  --highlight-error-color: #e85d61;
+  --success-color: #28a745;
+  --highlight-success-color: #34ce57;
+  --warning-color: #cc8b35;
+  --highlight-warning-color: #dea04d;
+  --info-color: #18b7be;
+  --highlight-info-color: #1fd0d8;
+
+  /* Layout */
+  --padding: 16px;
+  --gap: 16px;
+  --border-radius: 6px;
+  --transition-duration: 0.3s;
+  }
+/*=====  End of Global Theme Variables  ======*/
+
+/*=============================================
+=            Typography Styles                =
+=============================================*/
+
+body {
+    font-family: 'Kanit', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 var(--gap) 0;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 var(--gap) 0;
+  }
+
+/*=====  End of Typography Styles  ======*/
+
+/*=============================================
+=            Interactive Elements             =
+=============================================*/
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  } 
+
+  a:hover {
+    color: var(--link-hover-color);
+  }
+
+/* Buttons Base Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-duration);
+    font-family: 'Kanit', sans-serif;
+    box-shadow: 0 2px 4px rgba(7, 42, 64, 0.1);
+  }
+
+  .btn:hover {
+    background-color: var(--highlight-info-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(7, 42, 64, 0.15);
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(7, 42, 64, 0.15);
+  }
+
+  /* Status Buttons */
+  .btn-success {
+    background-color: var(--success-color);
+  }
+
+  .btn-success:hover {
+    background-color: var(--highlight-success-color);
+  }
+
+  .btn-warning {
+    background-color: var(--warning-color);
+  }
+
+  .btn-warning:hover {
+    background-color: var(--highlight-warning-color);
+  }
+
+  .btn-error {
+    background-color: var(--error-color);
+  }
+
+  .btn-error:hover {
+    background-color: var(--highlight-error-color);
+  }
+  button {
+    font-family: 'Kanit', sans-serif; /* Apply to all button elements */
+  }
+
+
+/*=====  End of Interactive Elements  ======*/
+
+/*=============================================
+=            Layout Components                =
+=============================================*/
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1338px;
+    margin: 0 auto;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  }
+  
+  /* Column */
+  .col {
+    flex: 1;
+    padding: var(--gap);
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  
+  /* Custom column sizes */
+  .col-6 {
+    flex: 0 0 50%;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 600px) {
+    .col-6 {
+      flex: 0 0 100%;
+    }
+  }
+
+/*=====  End of Layout Components  ======*/
+
+/*=============================================
+=            Utility Classes                  =
+=============================================*/
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Margin Utilities */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/* Padding Utilities */
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+/*=====  End of Utility Classes  ======*/
+

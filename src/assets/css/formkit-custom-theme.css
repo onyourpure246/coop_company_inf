@@ -1,0 +1,13 @@
+
+.formkit-wrapper, .formkit-fieldset{
+  max-width: none;
+}
+
+
+/* FormKit Label Styles */
+.formkit-label {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+

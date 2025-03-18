@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost:8080/companyfinding -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" href="http://localhost:8080/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./coophelper_files/css2" rel="stylesheet">
+    <title>coophelper</title>
+  <script defer="" src="./coophelper_files/chunk-vendors.js.download"></script><script defer="" src="./coophelper_files/app.js.download"></script><style type="text/css">
+.navbar[data-v-4295d220] {
+  background-color: var(--primary-color);
+  color: white;
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  left: 0;
+  width: 100%;
+  z-index: 1002;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: -webkit-fill-available;
+}
+.navbar-container[data-v-4295d220] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1002;
+}
+.logo[data-v-4295d220] {
+  display: flex;
+  align-items: center;
+}
+.logo-image[data-v-4295d220] {
+  height: 40px;
+  cursor: pointer;
+  filter: brightness(1000);
+}
+.logo-text[data-v-4295d220] {
+  font-size: 1rem;
+  color: white;
+  margin-left: 10px;
+}
+.nav-links[data-v-4295d220] {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links button[data-v-4295d220] {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Kanit', sans-serif;
+}
+.nav-links button[data-v-4295d220]:hover {
+  color: var(--highlight-accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.admin-menu-card[data-v-4295d220] {
+  position: absolute;
+  right: 50px;
+  top: 60px;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+.admin-menu-card ul[data-v-4295d220] {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+.admin-menu-card ul li[data-v-4295d220] {
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.admin-menu-card ul li[data-v-4295d220]:last-child {
+  border-bottom: none;
+}
+.admin-menu-card button[data-v-4295d220] {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+}
+.admin-menu-card button[data-v-4295d220]:hover {
+  color: var(--highlight-accent-color);
+}
+@media (max-width: 768px) {
+.logo-text[data-v-4295d220] {
+    display: none;
+}
+.button-text[data-v-4295d220] {
+    display: none; /* Hide button text on smaller screens */
+}
+}
+@media (max-width: 480px) {
+.logo-text[data-v-4295d220] {
+    font-size: 0.8rem;
+}
+.nav-links button[data-v-4295d220] {
+    font-size: 0.9rem;
+}
+}
+</style><style type="text/css">
+#app {
+  font-family: 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0px;
+}
+
+
+</style><style type="text/css">
+.login-container[data-v-3a5d5944] {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card[data-v-3a5d5944] {
+  background-color: #fff; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 100px;
+  align-content: center;
+}
+.card-title[data-v-3a5d5944] {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.field[data-v-3a5d5944] {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.field label[data-v-3a5d5944] {
+  display: block;
+  margin-bottom: 5px;
+}
+.field input[data-v-3a5d5944] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.button[data-v-3a5d5944] {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button[data-v-3a5d5944]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.error-message[data-v-3a5d5944] {
+  color: red;
+  margin-top: 10px;
+}
+.btn-secondary[data-v-3a5d5944] {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+.btn-secondary[data-v-3a5d5944]:hover {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+.modal[data-v-3a5d5944] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content[data-v-3a5d5944] {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.close[data-v-3a5d5944] {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close[data-v-3a5d5944]:hover,
+.close[data-v-3a5d5944]:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style><style type="text/css">
+.fixed-search-bar {
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 1001;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: -webkit-fill-available;
+}
+.container {
+  width: 100%;
+  max-width: -webkit-fill-available;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px 0 0 -5px;
+}
+.col {
+  flex: 1;
+  padding: 5px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+.text-field {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+.text-field:focus {
+  border-color: var(--highlight-color);
+  outline: none;
+}
+.btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.amber-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+.amber-btn:hover {
+  background-color: var(--highlight-accent-color);
+}
+.search-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+h1 {
+  color: white;
+}
+@media (max-width: 768px) {
+.row {
+    display: flex;
+    margin: calc(-1* var(--gap)) 0 0 calc(-1* var(--gap));
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.container {
+    max-width: 500px; /* Adjusted max-width for narrower layout */
+    padding: 10px;
+}
+.search-header {
+    font-size: 20px;
+}
+.btn {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+}
+
+</style><style type="text/css">
+.navbar[data-v-11ca6f4b] {
+  background-color: var(--background-color);
+  padding: var(--padding);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn[data-v-11ca6f4b] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.amber-btn[data-v-11ca6f4b] {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.amber-btn[data-v-11ca6f4b]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.card[data-v-11ca6f4b] {
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin-bottom: var(--gap);
+  transition: box-shadow var(--transition-duration) ease-in-out;
+}
+.elevated[data-v-11ca6f4b] {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.company-card[data-v-11ca6f4b] {
+  cursor: pointer;
+  transition: transform var(--transition-duration);
+  padding: 25px;
+  background: white;
+}
+.details-section[data-v-11ca6f4b] {
+  position: sticky;
+  top: 260px;
+  bottom: 500px; /* Adjust this value to position it correctly within the container */
+  height: 500px; /* Make it take the full height of the viewport */
+  overflow-y: auto; /* Enable scrolling if content exceeds the height */
+  
+  z-index: 1000;
+  
+  padding: 10px;
+}
+.company-card[data-v-11ca6f4b]:hover {
+  transform: translateY(-5px);
+}
+.company-text[data-v-11ca6f4b] {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+.details-card[data-v-11ca6f4b] {
+  background: white;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+.row[data-v-11ca6f4b] {
+  position: relative; /* Ensure the parent container is positioned */
+}
+.placeholder-card[data-v-11ca6f4b] {
+  background: white;
+  text-align: center;
+  color: var(--text-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+.fixed-search-bar[data-v-11ca6f4b] {
+  position: fixed;
+  top: 60px; /* Adjust this value to match the height of the navbar */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2000;
+  padding: 10px; /* Adjust padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+.navbar[data-v-11ca6f4b] {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.container[data-v-11ca6f4b] {
+    margin-top: 480px;
+}
+.row[data-v-11ca6f4b] {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: calc(-1* var(--gap)) 0 0 calc(-1* var(--gap));
+    flex-direction: row;
+}
+.col[data-v-11ca6f4b] {
+    max-width: 100%;
+}
+.company-text[data-v-11ca6f4b] {
+    font-size: 16px;
+}
+.btn[data-v-11ca6f4b] {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+}
+</style><style type="text/css">
+.container[data-v-b02fc960] {
+  margin-top: 150px;
+  padding: var(--padding);
+  background-color: var(--background-color);
+}
+.row[data-v-b02fc960] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.col[data-v-b02fc960] {
+  flex: 1;
+  padding: var(--padding);
+  box-sizing: border-box;
+}
+.company-card[data-v-b02fc960], .form-card[data-v-b02fc960] {
+  border: 1px solid #ddd; /* Add border */
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: var(--padding);
+}
+.company-info[data-v-b02fc960] {
+  text-align: center;
+}
+.details h2[data-v-b02fc960] {
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.details p[data-v-b02fc960] {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.form-group[data-v-b02fc960] {
+  margin-bottom: var(--gap);
+  text-align: left;
+}
+.form-group-inline[data-v-b02fc960] {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.form-group-inline .form-group[data-v-b02fc960]:first-child {
+  flex: 1; /* Phone input takes less space */
+}
+.form-group-inline .form-group[data-v-b02fc960]:last-child {
+  flex: 2; /* Email input takes more space */
+}
+.form-group label[data-v-b02fc960] {
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+.form-group input[data-v-b02fc960],
+.form-group select[data-v-b02fc960] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  transition: border-color var(--transition-duration), box-shadow var(--transition-duration);
+}
+.form-group input[data-v-b02fc960]:focus,
+.form-group select[data-v-b02fc960]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
+  outline: none;
+}
+button[data-v-b02fc960] {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color var(--transition-duration);
+}
+button[data-v-b02fc960]:hover {
+  background-color: var(--highlight-accent-color);
+}
+h1[data-v-b02fc960] {
+  color: black;
+}
+@media (max-width: 768px) {
+.row[data-v-b02fc960] {
+    flex-direction: column;
+}
+.col[data-v-b02fc960] {
+    max-width: 100%;
+}
+}
+@media (max-width: 480px) {
+.details h2[data-v-b02fc960] {
+    font-size: 24px;
+}
+.form-group label[data-v-b02fc960] {
+    font-size: 14px;
+}
+button[data-v-b02fc960] {
+    font-size: 16px;
+    padding: 12px;
+}
+}
+
+</style><style type="text/css">
+.profile-container[data-v-2976f5d8] {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+h1[data-v-2976f5d8], h2[data-v-2976f5d8] {
+    text-align: center;
+    color: #2c3e50;
+}
+.section-box[data-v-2976f5d8] {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 600px; /* Set a maximum width */
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto; 
+    width: 100%; /* Ensure full width within max-width */
+    box-sizing: border-box;
+}
+.section-box[data-v-2976f5d8] > * {
+    margin-bottom: 10px; /* Add gap between elements */
+}
+.section-box[data-v-2976f5d8] > *:last-child {
+    margin-bottom: 0; /* Remove margin from the last element */
+}
+label[data-v-2976f5d8] {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"][data-v-2976f5d8],
+input[type="number"][data-v-2976f5d8],
+input[type="file"][data-v-2976f5d8],
+select[data-v-2976f5d8] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[data-v-2976f5d8] {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button[data-v-2976f5d8]:hover {
+    background-color: var(--highlight-accent-color);
+}
+form[data-v-2976f5d8] {
+    display: flex;
+    flex-direction: column;
+}
+.name-container[data-v-2976f5d8],
+.contact-container[data-v-2976f5d8] {
+    display: flex;
+    gap: 10px;
+}
+.name-container label[data-v-2976f5d8],
+.contact-container label[data-v-2976f5d8] {
+    flex: 1;
+    margin: 0;
+}
+.name-line[data-v-2976f5d8] {
+    font-size: 24px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: make the text bold */
+    color: var(--primary-color); /* Use your primary text color variable here */
+}
+button[type="cancel"][data-v-2976f5d8] {
+    background-color: var(--error-color); /* Change to success color */
+}
+button[type="cancek"][data-v-2976f5d8]:hover {
+    background-color: #5dce61; /* Optional: a slightly lighter shade for hover */
+}
+
+
+</style><style type="text/css">
+.application-history[data-v-c6442ff6] {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+}
+.status-description-btn[data-v-c6442ff6] {
+  margin-bottom: 20px; /* Add space below the button */
+}
+.application-card[data-v-c6442ff6] {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+.application-card[data-v-c6442ff6]:hover {
+  border-color: var(--highlight-accent-color);
+}
+.actions button[data-v-c6442ff6] {
+  margin-left: 8px;
+}
+
+/* Buttons */
+.btn[data-v-c6442ff6] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.btn[data-v-c6442ff6]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.btn-confirmed[data-v-c6442ff6] {
+  background-color: var(--success-color);
+}
+.btn-confirmed[data-v-c6442ff6]:hover {
+  background-color: #5dce61;
+}
+.btn-withdrawn[data-v-c6442ff6] {
+  background-color: var(--error-color);
+}
+.btn-withdrawn[data-v-c6442ff6]:hover {
+  background-color: #ff7272;
+}
+.button-group[data-v-c6442ff6] {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  margin-top: 20px;
+}
+.button-group .btn[data-v-c6442ff6] {
+  flex: 1;
+  margin: 0 5px; /* Add some space between buttons */
+}
+.modal-overlay[data-v-c6442ff6] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content[data-v-c6442ff6] {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 850px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content p[data-v-c6442ff6] {
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure the paragraph takes full width */
+}
+.modal-content button[data-v-c6442ff6] {
+  margin-top: 20px;
+  align-self: center; /* Center the button */
+}
+h1[data-v-c6442ff6]{
+  color: var(--secondary-color);
+  text-align: center;
+}
+.modal-content h2[data-v-c6442ff6] {
+  margin-top: 0;
+}
+.modal-content button[data-v-c6442ff6] {
+  margin-top: 20px;
+}
+.passed-info-text[data-v-c6442ff6]{
+  color: var(--warning-color);
+}
+.status-in-progress[data-v-c6442ff6] {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.status-ready[data-v-c6442ff6] {
+  color: var(--warning-color);
+  font-weight: bold;
+}
+.status-disqualified[data-v-c6442ff6] {
+  color: var(--error-color);
+  font-weight: bold;
+}
+.status-passed[data-v-c6442ff6] {
+  color: purple;
+  font-weight: bold;
+}
+.status-confirmed[data-v-c6442ff6] {
+  color: var(--success-color);
+  font-weight: bold;
+}
+.status-eliminated[data-v-c6442ff6] {
+  color: var(--error-color);
+  font-weight: bold;
+}
+.status-withdrawn[data-v-c6442ff6] {
+  color: gray;
+  font-weight: bold;
+}
+.status-unknown[data-v-c6442ff6] {
+  color: black;
+  font-weight: bold;
+}
+.modal-content .btn[data-v-c6442ff6] {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+.modal-content .btn-secondary[data-v-c6442ff6] {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+.status-details ul[data-v-c6442ff6] {
+  list-style-type: none;
+  padding: 0;
+}
+.status-details li[data-v-c6442ff6] {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+</style><style type="text/css">
+.application-details[data-v-45a5c18e] {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 90px;
+}
+.company-header[data-v-45a5c18e] {
+  margin-bottom: 20px;
+}
+.no-data-message[data-v-45a5c18e] {
+  color: #ff0000;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+.table-responsive[data-v-45a5c18e] {
+  overflow-x: auto;
+}
+table[data-v-45a5c18e] {
+  width: 200%;
+  border-collapse: collapse;
+}
+th[data-v-45a5c18e], td[data-v-45a5c18e] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th[data-v-45a5c18e] {
+  background-color: #f2f2f2;
+}
+button[data-v-45a5c18e] {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.export-button[data-v-45a5c18e] {
+  margin-bottom: 20px;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.export-button[data-v-45a5c18e]:hover {
+  background-color: #5dce61;
+}
+a[data-v-45a5c18e] {
+  color: #007bff;
+  text-decoration: none;
+}
+a[data-v-45a5c18e]:hover {
+  text-decoration: underline;
+}
+h1[data-v-45a5c18e] {
+  color: var(--secondary-color);
+}
+.filter-container[data-v-45a5c18e] {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.modal-overlay[data-v-45a5c18e] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content[data-v-45a5c18e] {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 850px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.status-details ul[data-v-45a5c18e] {
+  list-style-type: none;
+  padding: 0;
+}
+.status-details li[data-v-45a5c18e] {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.status-description-btn[data-v-45a5c18e] {
+  margin-left: 10px;
+  background-color: var(--accent-color);
+}
+.status-description-btn[data-v-45a5c18e]:hover {
+  margin-left: 10px;
+  background-color: var(--highlight-accent-color);
+}
+.btn[data-v-45a5c18e] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-duration);
+}
+
+
+/* 
+.btn:hover {
+  background-color: var(--highlight-accent-color);
+} */
+.status-in-progress[data-v-45a5c18e] {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.status-ready[data-v-45a5c18e] {
+  color: var(--warning-color);
+  font-weight: bold;
+}
+.status-disqualified[data-v-45a5c18e] {
+  color: var(--error-color);
+  font-weight: bold;
+}
+.status-passed[data-v-45a5c18e] {
+  color: purple;
+  font-weight: bold;
+}
+.status-confirmed[data-v-45a5c18e] {
+  color: var(--success-color);
+  font-weight: bold;
+}
+.status-eliminated[data-v-45a5c18e] {
+  color: var(--error-color);
+  font-weight: bold;
+}
+.status-withdrawn[data-v-45a5c18e] {
+  color: gray;
+  font-weight: bold;
+}
+.status-unknown[data-v-45a5c18e] {
+  color: black;
+  font-weight: bold;
+}
+#statusFilter[data-v-45a5c18e] {
+  padding: 5px;
+  margin-left: 10px;
+  width: 150px; /* Adjust the width as needed */
+}
+@media (max-width: 768px) {
+.application-details[data-v-45a5c18e] {
+    padding: 10px;
+}
+th[data-v-45a5c18e], td[data-v-45a5c18e] {
+    padding: 6px;
+    font-size: 14px;
+}
+button[data-v-45a5c18e] {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+}
+</style><style type="text/css">h1[data-v-26ea4e1c] {
+  color: var(--primary-color);
+}
+.container[data-v-26ea4e1c] {
+  padding: var(--padding);
+  background-color: var(--background-color);
+  margin-top: 100px;
+}
+.search[data-v-26ea4e1c] {
+  margin-bottom: var(--gap);
+}
+.search-section[data-v-26ea4e1c] {
+  display: flex;
+  align-items: baseline;
+  gap: 10px; /* Space between elements */
+}
+.search-section input[data-v-26ea4e1c] {
+  flex: 1; /* Allow the input to take up available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+.search-btn[data-v-26ea4e1c] {
+  background-color: var(--accent-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.search-btn[data-v-26ea4e1c]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.clear-filter-btn[data-v-26ea4e1c] {
+  background-color: var(--error-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.clear-filter-btn[data-v-26ea4e1c]:hover {
+  background-color: #ff7272; /* Slightly lighter shade for hover effect */
+}
+.search-result[data-v-26ea4e1c] {
+  margin-top: 10px; /* Space above the result text */
+  justify-self: center;
+}
+.student-count[data-v-26ea4e1c] {
+  font-size: 16px;
+  color: var(--text-color);
+  place-self: center;
+}
+.student-table[data-v-26ea4e1c] {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--gap);
+}
+.student-table th[data-v-26ea4e1c], .student-table td[data-v-26ea4e1c] {
+  border: 1px solid #ccc;
+  padding: var(--gap);
+  text-align: left;
+}
+.student-table th[data-v-26ea4e1c] {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.student-table tr[data-v-26ea4e1c]:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.student-table tr[data-v-26ea4e1c]:hover {
+  background-color: var(--highlight-accent-color);
+}
+button[data-v-26ea4e1c] {
+  margin-top: var(--gap);
+}
+.name-container[data-v-26ea4e1c] {
+  display: flex;
+  gap: 10px;
+}
+.btn-secondary[data-v-26ea4e1c] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.modal[data-v-26ea4e1c] {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content[data-v-26ea4e1c] {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: var(--border-radius);
+}
+.close[data-v-26ea4e1c] {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close[data-v-26ea4e1c]:hover, .close[data-v-26ea4e1c]:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.name-container > div[data-v-26ea4e1c] {
+  flex: 1;
+}
+
+
+
+</style><style type="text/css">
+h1[data-v-af2d471e]{
+  color: var(--primary-color);
+}
+.header[data-v-af2d471e] {
+  margin-bottom: var(--gap);
+}
+.container[data-v-af2d471e] {
+  padding: var(--padding);
+  background-color: var(--background-color);
+  margin-top: 100px;
+}
+.user-table[data-v-af2d471e] {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--gap);
+}
+.user-table th[data-v-af2d471e], .user-table td[data-v-af2d471e] {
+  border: 1px solid #ccc;
+  padding: var(--padding);
+  text-align: left;
+}
+.user-table th[data-v-af2d471e] {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.user-table tr[data-v-af2d471e]:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.user-table tr[data-v-af2d471e]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.modal[data-v-af2d471e] {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content[data-v-af2d471e] {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: var(--border-radius);
+}
+.close[data-v-af2d471e] {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close[data-v-af2d471e]:hover, .close[data-v-af2d471e]:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn[data-v-af2d471e] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.btn[data-v-af2d471e]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.action-btn[data-v-af2d471e] {
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-right: 5px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.action-btn-edit[data-v-af2d471e] {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.action-btn-edit[data-v-af2d471e]:hover {
+  background-color: #64b5f6;
+}
+.action-btn-delete[data-v-af2d471e] {
+  background-color: var(--error-color);
+  color: white;
+}
+.action-btn-delete[data-v-af2d471e]:hover {
+  background-color: #ff7272;
+}
+input[type="text"][data-v-af2d471e],
+input[type="password"][data-v-af2d471e],
+select[data-v-af2d471e] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: var(--gap);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+input[data-v-af2d471e]:focus,
+select[data-v-af2d471e]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+.import-input[data-v-af2d471e]{
+  width: 300px;
+}
+.import[data-v-af2d471e]{
+  display: flex;
+  align-items: center;
+}
+.user-actions[data-v-af2d471e] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--gap);
+}
+.single-user-create[data-v-af2d471e],
+.import-section[data-v-af2d471e] {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+.btn-primary[data-v-af2d471e]{
+  background: var(--success-color);
+}
+.btn-primary[data-v-af2d471e]:hover{
+  background: #5dce61;
+}
+.import-input[data-v-af2d471e] {
+  margin-right: var(--gap);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+.user-actions[data-v-af2d471e] {
+    flex-direction: column;
+    align-items: stretch;
+}
+.single-user-create[data-v-af2d471e],
+  .import-section[data-v-af2d471e] {
+    flex-direction: column;
+    align-items: stretch;
+}
+.modal-content[data-v-af2d471e] {
+    width: 95%;
+}
+}
+@media (max-width: 480px) {
+.container[data-v-af2d471e] {
+    margin-top: 50px;
+    padding: 10px;
+}
+.user-table th[data-v-af2d471e],
+  .user-table td[data-v-af2d471e] {
+    padding: 8px;
+    font-size: 14px;
+}
+.btn[data-v-af2d471e],
+  .action-btn[data-v-af2d471e] {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+}
+
+</style><style type="text/css">
+h1[data-v-43227a7e]{
+  color: var(--primary-color);
+}
+.admin-company-management[data-v-43227a7e] {
+  padding: var(--padding);
+  background-color: var(--background-color);
+  margin-top: 100px;
+}
+.header[data-v-43227a7e] {
+  margin-bottom: var(--gap);
+}
+.company-actions[data-v-43227a7e] {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: var(--gap);
+}
+.single-company-create[data-v-43227a7e],
+.import-section[data-v-43227a7e] {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+.company-table[data-v-43227a7e] {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--gap, 20px);
+}
+.company-table th[data-v-43227a7e], .company-table td[data-v-43227a7e] {
+  border: 1px solid #ccc;
+  padding: var(--padding);
+  text-align: left;
+}
+.company-table th[data-v-43227a7e] {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.company-table tr[data-v-43227a7e]:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.company-table tr[data-v-43227a7e]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.btn[data-v-43227a7e] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+.btn[data-v-43227a7e]:hover {
+  background-color: var(--highlight-accent-color);
+}
+.btn-primary[data-v-43227a7e] {
+  background-color: var(--success-color);
+}
+.btn-primary[data-v-43227a7e]:hover {
+  background-color: #5dce61;
+}
+.btn-secondary[data-v-43227a7e] {
+  background-color: var(--error-color);
+}
+.btn-secondary[data-v-43227a7e]:hover {
+  background-color: #ff7272;
+}
+.import-input[data-v-43227a7e] {
+  margin-right: var(--gap);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.modal[data-v-43227a7e] {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content[data-v-43227a7e] {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: var(--border-radius);
+}
+.close[data-v-43227a7e] {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close[data-v-43227a7e]:hover, .close[data-v-43227a7e]:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.company-form[data-v-43227a7e] {
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.company-form input[data-v-43227a7e] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius, 4px);
+}
+.company-form button[data-v-43227a7e] {
+  margin-right: 10px;
+}
+
+</style><style type="text/css">/* Global Styles */
+:root {
+  --primary-color: #202681;
+  --secondary-color: #203A7C;
+  --accent-color: #FBC94B;
+  --highlight-accent-color: #FFD740;
+  --error-color: #FF5252;
+  --highlight-error-color: #ff7272;
+  --info-color: #2196F3;
+  --success-color: #4CAF50;
+  --warning-color: #FB8C00;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --link-color: #007bff;
+  --padding: 16px;
+  --gap: 16px;
+  --border-radius: 4px;
+  --transition-duration: 0.3s;
+  }
+  /* Typography */
+  body {
+    font-family: 'Kanit', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 var(--gap) 0;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 var(--gap) 0;
+  }
+
+  /* Links */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  } 
+
+  a:hover {
+    color: var(--accent-color);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .btn:hover {
+    background-color: var(--highlight-accent-color);
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--primary-color);
+  }
+  button {
+    font-family: 'Kanit', sans-serif; /* Apply to all button elements */
+  }
+
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  }
+  
+  /* Column */
+  .col {
+    flex: 1;
+    padding: var(--gap);
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  
+  /* Custom column sizes */
+  .col-6 {
+    flex: 0 0 50%;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 600px) {
+    .col-6 {
+      flex: 0 0 100%;
+    }
+  }
+
+  /* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+/* Form Elements */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: var(--gap);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  font-family: 'Kanit', sans-serif;
+}
+  </style></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but coophelper doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app" data-v-app=""><div id="app"><!-- Conditionally render the NavBar --><nav data-v-4295d220="" class="navbar"><div data-v-4295d220="" class="navbar-container"><a data-v-4295d220="" href="http://localhost:8080/" class="logo"><img data-v-4295d220="" src="./coophelper_files/web-app-logo.png" alt="CoopHelper Logo" class="logo-image"><span data-v-4295d220="" class="logo-text">งานสหกิจศึกษาสำหรับประชาสัมพันธ์สถานประกอบการ สาขาเทคโนโลยีสารสนเทศและการสื่อสารดิจิทัล</span></a><ul data-v-4295d220="" class="nav-links"><li data-v-4295d220=""><button data-v-4295d220=""><svg data-v-4295d220="" class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><span data-v-4295d220="" class="button-text"> ค้นหาสถานประกอบการ</span></button></li><!--v-if--><!--v-if--><li data-v-4295d220=""><button data-v-4295d220=""><svg data-v-4295d220="" class="svg-inline--fa fa-user" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path class="" fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"></path></svg><span data-v-4295d220="" class="button-text"> ระบบแอดมิน</span></button></li><li data-v-4295d220=""><button data-v-4295d220=""><svg data-v-4295d220="" class="svg-inline--fa fa-right-from-bracket" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="right-from-bracket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" fill="currentColor" d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg><span data-v-4295d220="" class="button-text"> ออกจากระบบ</span></button></li></ul></div><!-- Admin Menu Card --><!--v-if--></nav><div data-v-11ca6f4b="" class="app"><!-- Search Tools --><div data-v-11ca6f4b="" class="app"><!-- Search Tools --><header class="search-tools fixed-search-bar"><div class="container mt-5"><!-- Header Text --><h1 class="search-header">ค้นหาสถานประกอบการ</h1><form class="row justify-center"><div class="col col-12 col-md-3"><input type="text" placeholder="บริษัท" class="text-field"></div><div class="col col-12 col-md-3"><input type="text" placeholder="จังหวัด" class="text-field"></div><div class="col col-12 col-md-3"><input type="text" placeholder="อำเภอ/เขต" class="text-field"></div><div class="col col-12 col-md-2"><button type="submit" class="btn amber-btn"><svg class="svg-inline--fa fa-filter" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" fill="currentColor" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"></path></svg> ค้นหา</button></div></form></div></header></div><!-- Main Content --><main data-v-11ca6f4b="" class="container"><div data-v-11ca6f4b="" class="row"><!-- Left List Section --><aside data-v-11ca6f4b="" class="col col-12 col-md-4"><!-- Display the number of companies --><div data-v-11ca6f4b="" class="company-count"> ผลลัพธ์ค้นหา : 35 สถานประกอบการ </div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไทยซูซูกิมอเตอร์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(THAI SUZUKI MOTOR COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจผลิตและจำหน่ายรถจักรยานยนต์และรถยนต์ รวมถึงงานวิจัยและพัฒนาผลิตภัณฑ์ใหม่ๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card elevated"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไทยบริดจสโตน จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(THAI BRIDGESTONE CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจผลิตและจำหน่ายยางรถยนต์, ยางอุตสาหกรรม และผลิตภัณฑ์ยางต่างๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท สำนักพิมพ์ เอมพันธ์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(AIMPHAN PRESS CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการผลิตและออกแบบแม่พิมพ์, ชิ้นส่วนโลหะ, และการผลิตชิ้นส่วนอุตสาหกรรม</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท เดลแมกซ์แมชินเนอรี่ จำกัด (คลองหลวง)</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(DELMAX MACHINERY CO.,LTD)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจำหน่ายและบริการเครื่องจักรอุตสาหกรรม และเครื่องมือเครื่องจักรต่างๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ซีดีจี กรุ๊ป จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(CDG GROUP CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจบริการด้านการบริหารจัดการข้อมูลสารสนเทศ, คำปรึกษาด้าน IT และซอฟต์แวร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท คราทอส อินโน เทค จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(KRATOS INNO TECH COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจพัฒนาเทคโนโลยีและผลิตภัณฑ์ในด้านระบบอัตโนมัติและหุ่นยนต์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ซอฟต์สแควร์ อินเตอร์เนชั่นแนล จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(SOFT SQUARE INTERNATIONAL CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจพัฒนาและให้บริการซอฟต์แวร์ ERP, CRM และโซลูชันธุรกิจต่างๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท เอ-โฮสต์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(A-HOST CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจให้บริการโฮสติ้ง, คลาวด์คอมพิวติ้ง และการจัดการเซิร์ฟเวอร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท อาซ์คมี โซลูชั่น แอนด์ คอนซัลแทนท์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(ASKME SOLUTION &amp; CONSULTANL COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจให้คำปรึกษาด้าน IT, การปรับปรุงกระบวนการทำงาน และการจัดการ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท บีทามส์ โซลูชั่น จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(BETIMES SOLUTIONS COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจให้บริการด้านเทคโนโลยีข้อมูลและการพัฒนาแอปพลิเคชัน</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท จีเอ็มโปรซอฟท์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(GM PROSOFT COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจพัฒนาและให้บริการซอฟต์แวร์สำหรับธุรกิจ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท เจกรุ๊ป เทคโนโลยี จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(J-GROUP TECHNOLOGY COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจพัฒนาเทคโนโลยีด้าน IT, ระบบซอฟต์แวร์ และอุปกรณ์ต่างๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท แอ๊กเซ็นเทล (ไทยแลนด์) จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(EXCENTEL (THAILAND) CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจให้บริการด้านการสื่อสารและผลิตภัณฑ์ที่เกี่ยวข้อง</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท บางกอก เว็บ โซลูชั่น จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(BANGKOK WEB SOLUTION CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจพัฒนาและออกแบบเว็บไซต์, แอปพลิเคชัน และบริการด้านการตลาดออนไลน์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ทีทูพี จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(T2P CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการให้บริการรับชำระเงินทางอิเล็กทรอนิกส์และการให้บริการเงินอิเล็กทรอนิกส์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไซเบอร์ เนกเทค จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(CYBER INFO SYSTEM CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการบริการเทคโนโลยีสารสนเทศและคอมพิวเตอร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ศูนย์ส่งเสริมทักษะทางวิชาการญาณวิทย์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(YANAWIT PROMOTION ACADEMIC SKILLS CENTER COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจประกอบกิจการจัดฝึกอบรม สัมมนา แนะแนว ด้านการศึกษาทางวิชาการ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท อะแวร์ เทคโนโลยี โซลูชั่น คอร์ปอเรชั่น จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(AWARE TECHNOLOGY SOLUTIONS CORPORATION LTD)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจัดทำโปรแกรมคอมพิวเตอร์และการให้คำปรึกษาเกี่ยวกับคอมพิวเตอร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท อาร์ วี คอนเน็กซ์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(R V CONNEX COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการผลิตอากาศยานยานอวกาศและเครื่องจักรที่เกี่ยวข้อง</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ซิสเต็มส์ ไพร์ม จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(SYSTEM PRIME COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการติดตั้งสิ่งก่อสร้างอื่นๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ธิงส์อนาไลติค จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(THINGS ANALYTIC CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจัดทำโปรแกรมเว็บเพจและเครือข่ายตามวัตถุประสงค์ของผู้ใช้</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไทยมิตซูวา จำกัด (มหาชน)</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(THAI MITSUWA PUBLIC COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการผลิตผลิตภัณฑ์พลาสติกการผลิตผลิตภัณฑ์แมกนีเซียม</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท จัสมิน เทคโนโลยี โซลูชั่น จำกัด (มหาชน)</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(JASMINE TECHNOLOGY SOLUTION PUBLIC COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">นนทบุรี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจขายและติดตั้งสื่อสารโทรคมนาคม</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท เถ้าแก่น้อย ฟู๊ดแอนด์มาร์เก็ตติ้ง จำกัด (มหาชน)</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(TAOKAENOI FOOD &amp; MARKETING PUBLIC COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">นนทบุรี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจผลิตและจำหน่ายสาหร่ายแปรรูป</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท เทคโนโลยี ดีเวลลอปเมนท์ แอนด์ ซัพพลาย จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(TECHNOLOGY DEVELOPMENT AND SUPPLY CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">สมุทรปราการ</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจำหน่าย,ติดตั้ง,ออกแบบอุปกรณ์ทำบาร์โค้ด</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ควิก อีอาร์พี จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(QUICK ERP COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการบริการเทคโนโลยีสารสนเทศและคอมพิวเตอร์อื่นๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท กรีน ลาเท็กซ์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(GREEN LATEX COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการขายส่งเฟอร์นิเจอร์ชนิดใช้ในครัวเรือน</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไอบิสซิเนส คอร์ปอเรชั่น จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(IBUSINESS CORPORATION CO.,LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">นนทบุรี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจบริการโฆษณาทางอินเตอร์เน็ตและรับทำซอฟท์แวร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท โลจิส บอย จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(LOGIS BOY CO., LTD.)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจการจัดทำโปรแกรมเว็บเพจและเครือข่ายตามวัตถุประสงค์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไอที เทคโนคอม จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(IT TECHNOCOM LTD.PART)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจฝึกอบรม ให้คำปรึกษาพัฒนาโปรแกรม ดูแลระบบคอมพิวเตอร์ และสอนภาษา</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท อินฟอร์เมชั่น เซอร์วิส แอนด์ คอนซัลแทนท์ จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(INFORMATION SERVICE AND CONSULTANT COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจประกอบกิจการนำเข้า ส่งออก ขายปลีกคอมพิวเตอร์และอุปกรณ์คอมพิวเตอร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ชายสี่บะหมี่เกี๊ยว จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(CHAIXI BAMEEKIAO COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจำหน่ายเส้นบะหมี่และอาหารอื่นๆ</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ธาส เอ็นจิเนียริ่ง บิส จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(TAS ENGINEERING BIZ COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจเกี่ยวกับการติดตั้งออกแบบพัฒนาปรับปรุงจัดซื้อจัดหา จำหน่ายระบบเครือข่ายคอมพิวเตอร์และระบบเทคโนโลยี</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ออลโซ กรุ๊ป จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(ALZO GROUP COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ปทุมธานี</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจจัดทำโปรแกรมคอมพิวเตอร์</small><br data-v-11ca6f4b=""></div></div><div data-v-11ca6f4b="" class="card mb-3 company-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไอที บี ที คอร์ปอเรชั่น จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">(ITBT CORPORATION COMPANY LIMITED)</strong><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจ ผลิต ติดตั้งซ่อมแซม รับจ้างบำรุงรักษา เขียนโปรแกรมระบบคอมพิวเตอร์</small><br data-v-11ca6f4b=""></div></div></aside><!-- Right Detail Section --><section data-v-11ca6f4b="" class="col col-12 col-md-8 details-section"><div data-v-11ca6f4b="" class="card details-card"><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">บริษัท ไทยบริดจสโตน จำกัด</strong><br data-v-11ca6f4b=""><strong data-v-11ca6f4b="">THAI BRIDGESTONE CO., LTD.</strong><br data-v-11ca6f4b=""></div><br data-v-11ca6f4b=""><div data-v-11ca6f4b="" class="card-text company-text"><small data-v-11ca6f4b="">จังหวัด </small><small data-v-11ca6f4b="">กรุงเทพมหานคร</small><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ประเภท </small><small data-v-11ca6f4b="">เอกชน</small><br data-v-11ca6f4b=""></div><div data-v-11ca6f4b="" class="card-actions"><!--v-if--><button data-v-11ca6f4b="" class="btn amber-btn">ดูข้อมูลการสมัครออกฝึกสหกิจศึกษา</button></div><br data-v-11ca6f4b=""><div data-v-11ca6f4b="" class="card-text company-text"><strong data-v-11ca6f4b="">รายละเอียด </strong><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">ธุรกิจผลิตและจำหน่ายยางรถยนต์, ยางอุตสาหกรรม และผลิตภัณฑ์ยางต่างๆ</small><br data-v-11ca6f4b=""><br data-v-11ca6f4b=""><small data-v-11ca6f4b="">สถานที่ตั้ง </small><small data-v-11ca6f4b="">990 ชั้นที่ 16 ถนนพระราม4 แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500</small><br data-v-11ca6f4b=""></div></div></section></div></main></div></div></div>
+    <!-- built files will be auto injected -->
+  
+
+</body></html>
