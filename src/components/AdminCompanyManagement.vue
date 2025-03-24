@@ -4,20 +4,103 @@
       <h1>ข้อมูลสถานประกอบการ</h1>
     </div>
     <div class="user-actions">
-      <div class="action-section">
-        <button class="btn btn-success" @click="showAddCompanyForm">
-          <font-awesome-icon :icon="['fas', 'plus']" /> เพิ่มบริษัทใหม่
-        </button>
+      <div class="actions-header">
+        <h3><font-awesome-icon :icon="['fas', 'cog']" /> จัดการข้อมูล</h3>
       </div>
-      <div class="import-section">
-        <div class="input-group">
-          <input type="file" class="form-control" @change="handleFileUpload" accept=".xlsx, .xls" />
-          <button class="btn btn-primary" @click="importCompanies" :disabled="!file">
-            <font-awesome-icon :icon="['fas', 'file-import']" /> นำเข้าข้อมูล
+      <div class="actions-content">
+        <div class="action-section">
+          <h4>เพิ่มข้อมูลใหม่</h4>
+          <button class="btn btn-success action-btn" @click="showAddCompanyForm">
+            <font-awesome-icon :icon="['fas', 'plus']" /> เพิ่มบริษัทใหม่
           </button>
         </div>
-        <small class="text-muted">รองรับไฟล์ Excel (.xlsx, .xls)</small>
+        <div class="import-section">
+          <h4>นำเข้าข้อมูลจากไฟล์</h4>
+          <div class="input-group">
+            <input type="file" class="form-control" @change="handleFileUpload" accept=".xlsx, .xls" />
+            <button class="btn btn-primary" @click="importCompanies" :disabled="!file">
+              <font-awesome-icon :icon="['fas', 'file-import']" /> นำเข้าข้อมูล
+            </button>
+          </div>
+          <small class="text-muted">รองรับไฟล์ Excel (.xlsx, .xls)</small>
+        </div>
       </div>
+    </div>
+    <div class="search-section">
+      <div class="search-header">
+        <h3><font-awesome-icon :icon="['fas', 'search']" /> ค้นหาสถานประกอบการ</h3>
+      </div>
+      <FormKit
+        type="form"
+        v-model="searchForm"
+        @submit="handleSearch"
+        :actions="false"
+      >
+        <div class="search-grid">
+          <!-- ค้นหาทั่วไป -->
+          <FormKit
+            type="text"
+            name="generalSearch"
+            label="ค้นหาทั่วไป"
+            placeholder="ค้นหาข้อมูลบริษัท..."
+            v-model="searchForm.generalSearch"
+            prefix-icon="search"
+            outer-class="search-box"
+          />
+
+          <!-- ประเภทธุรกิจ -->
+          <FormKit
+            type="select"
+            name="businessType"
+            label="ประเภทธุรกิจ"
+            placeholder="เลือกประเภทธุรกิจ"
+            :options="[
+              { label: 'ทั้งหมด', value: '' },
+              { label: 'เอกชน', value: 'เอกชน' },
+              { label: 'หน่วยงานรัฐ', value: 'หน่วยงานรัฐ' },
+              { label: 'รัฐวิสาหกิจ', value: 'รัฐวิสาหกิจ' }
+            ]"
+            v-model="searchForm.businessType"
+          />
+
+          <!-- จังหวัด -->
+          <FormKit
+            type="select"
+            name="province"
+            label="จังหวัด"
+            placeholder="เลือกจังหวัด"
+            :options="[
+              { label: 'ทั้งหมด', value: '' },
+              ...provinces.map(p => ({ label: p, value: p }))
+            ]"
+            v-model="searchForm.province"
+          />
+
+          <!-- สาขาวิชา -->
+          <FormKit
+            type="select"
+            name="jobField"
+            label="สาขาวิชา"
+            placeholder="เลือกสาขาวิชา"
+            :options="[
+              { label: 'ทั้งหมด', value: '' },
+              ...Object.entries(jobFieldsMapping).map(([value, label]) => ({
+                label,
+                value
+              }))
+            ]"
+            v-model="searchForm.jobField"
+          />
+        </div>
+        <div class="search-actions">
+          <button type="submit" class="btn btn-primary search-btn">
+            <font-awesome-icon :icon="['fas', 'search']" /> ค้นหา
+          </button>
+          <button type="button" class="btn btn-secondary search-btn" @click="resetSearch">
+            <font-awesome-icon :icon="['fas', 'undo']" /> ล้างการค้นหา
+          </button>
+        </div>
+      </FormKit>
     </div>
    
     <table class="table table-striped">
@@ -223,6 +306,9 @@
   background-color: var(--background-color);
   padding: var(--padding);
   border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -238,41 +324,104 @@
 
 .user-actions {
   display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 2rem;
+  flex-direction: column;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
   background-color: white;
-  padding: 1.5rem;
+  padding: 0;
   border-radius: var(--border-radius);
   box-shadow: 0 2px 4px rgba(7, 42, 64, 0.1);
+  border: 1px solid rgba(7, 42, 64, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+}
+
+.user-actions:hover {
+  box-shadow: 0 4px 8px rgba(7, 42, 64, 0.15);
+}
+
+.actions-header {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(7, 42, 64, 0.1);
+}
+
+.actions-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actions-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .action-section {
   flex: 1;
+  padding: 1.5rem;
+  min-width: 250px;
+}
+
+.action-section h4,
+.import-section h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .import-section {
   flex: 2;
+  padding: 1.5rem;
+  border-left: 1px solid rgba(7, 42, 64, 0.1);
+  background-color: rgba(7, 42, 64, 0.02);
+  min-width: 350px;
+}
+
+.action-btn {
+  width: 100%;
 }
 
 .input-group {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
 }
 
 .form-control {
-  padding: 0.5rem;
-  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(7, 42, 64, 0.2);
   border-radius: var(--border-radius);
   flex: 1;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-control:hover {
+  border-color: var(--primary-color);
+  background-color: white;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  background-color: white;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
 }
 
 .text-muted {
   color: #6c757d;
   font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
 }
 
 .table {
@@ -284,6 +433,7 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(7, 42, 64, 0.1);
   margin-bottom: 2rem;
+  border: 1px solid rgba(7, 42, 64, 0.05);
 }
 
 .thead-dark {
@@ -315,27 +465,39 @@ tbody td {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   font-weight: 500;
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  font-size: 0.95rem;
 }
 
-.btn i {
+.btn i,
+.btn .svg-inline--fa {
   font-size: 1rem;
 }
 
 .btn:hover:not(:disabled) {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .btn-success {
@@ -397,8 +559,13 @@ tbody td {
 }
 
 @media (max-width: 768px) {
-  .user-actions {
+  .actions-content {
     flex-direction: column;
+  }
+
+  .import-section {
+    border-left: none;
+    border-top: 1px solid rgba(7, 42, 64, 0.1);
   }
 
   .form-grid {
@@ -409,9 +576,37 @@ tbody td {
     display: block;
     overflow-x: auto;
   }
+
+  .search-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-header h3,
+  .actions-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
   .header h1 {
     font-size: 1.5rem;
   }
@@ -424,6 +619,16 @@ tbody td {
   .table td, .table th {
     padding: 0.75rem;
     font-size: 0.875rem;
+  }
+
+  .actions-header h3,
+  .search-header h3 {
+    font-size: 1rem;
+  }
+
+  .action-section h4,
+  .import-section h4 {
+    font-size: 1rem;
   }
 }
 
@@ -545,29 +750,69 @@ tbody td {
 .search-section {
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   background: white;
-  padding: 1.5rem;
+  padding: 0;
   border-radius: var(--border-radius);
   box-shadow: 0 2px 4px rgba(7, 42, 64, 0.1);
+  border: 1px solid rgba(7, 42, 64, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.search-section:hover {
+  box-shadow: 0 4px 8px rgba(7, 42, 64, 0.15);
+}
+
+.search-header {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(7, 42, 64, 0.1);
+}
+
+.search-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-section form {
+  padding: 1.5rem;
 }
 
 .search-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .search-actions {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
   border-top: 1px solid rgba(7, 42, 64, 0.1);
+}
+
+.search-btn {
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .search-box {
@@ -575,19 +820,50 @@ tbody td {
 }
 
 :deep(.search-box .formkit-input),
-:deep(.formkit-input) {
+:deep(.search-section .formkit-input) {
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  border: 2px solid var(--primary-color);
+  border: 1px solid rgba(7, 42, 64, 0.2);
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
   width: 100%;
+  background-color: #f8f9fa;
+}
+
+:deep(.search-box .formkit-input:hover),
+:deep(.search-section .formkit-input:hover) {
+  border-color: var(--primary-color);
+  background-color: white;
 }
 
 :deep(.search-box .formkit-input:focus),
-:deep(.formkit-input:focus) {
-  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+:deep(.search-section .formkit-input:focus) {
+  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
   outline: none;
+  border-color: var(--primary-color);
+  background-color: white;
+}
+
+:deep(.search-section .formkit-label) {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+}
+
+:deep(.search-section .formkit-select) {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(7, 42, 64, 0.2);
+  border-radius: var(--border-radius);
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+:deep(.search-section .formkit-select:hover) {
+  border-color: var(--primary-color);
+  background-color: white;
 }
 
 :deep(.formkit-label) {
@@ -599,7 +875,7 @@ tbody td {
 :deep(.formkit-select) {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 2px solid var(--primary-color);
+  border: 1px solid rgba(7, 42, 64, 0.2);
   border-radius: var(--border-radius);
   background-color: white;
   cursor: pointer;
@@ -635,10 +911,13 @@ import {
   faPlus,
   faFileImport,
   faEdit,
-  faTrash
+  faTrash,
+  faSearch,
+  faUndo,
+  faCog
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPlus, faFileImport, faEdit, faTrash);
+library.add(faPlus, faFileImport, faEdit, faTrash, faSearch, faUndo, faCog);
 
 export default {
   components: {

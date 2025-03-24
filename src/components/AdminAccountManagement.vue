@@ -115,9 +115,12 @@
         <div v-if="resetPasswordResult">
           <div v-if="resetPasswordResult.success" class="success-message">
             <h3>รหัสผ่านถูกรีเซ็ตแล้ว</h3>
-            <p>รหัสผ่านชั่วคราวสำหรับผู้ใช้ <strong>{{ resetPasswordResult.username }}</strong> คือ:</p>
-            <div class="temp-password">{{ resetPasswordResult.temporaryPassword }}</div>
-            <p class="warning">กรุณาแจ้งรหัสผ่านชั่วคราวให้กับผู้ใช้ และแนะนำให้เปลี่ยนรหัสผ่านทันทีที่เข้าสู่ระบบ</p>
+            <p>รหัสผ่านชั่วคราวสำหรับผู้ใช้ <strong>{{ resetPasswordResult.username }}</strong> ได้ถูกส่งไปยังอีเมลมหาวิทยาลัยแล้ว</p>
+            <div class="email-sent">
+              <font-awesome-icon :icon="['fas', 'envelope']" />
+              {{ resetPasswordResult.email }}
+            </div>
+            <p class="info">ผู้ใช้สามารถตรวจสอบอีเมลเพื่อรับรหัสผ่านชั่วคราว และควรเปลี่ยนรหัสผ่านทันทีที่เข้าสู่ระบบ</p>
           </div>
           <div v-else class="error-message">
             <h3>เกิดข้อผิดพลาด</h3>
@@ -141,10 +144,11 @@ import {
   faEdit,
   faKey,
   faTrash,
-  faSave
+  faSave,
+  faEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faPlus, faFileImport, faEdit, faKey, faTrash, faSave);
+library.add(faPlus, faFileImport, faEdit, faKey, faTrash, faSave, faEnvelope);
 
 // Function to hash password
 const hashPassword = (password) => {
@@ -227,15 +231,59 @@ export default {
     async resetPassword(user) {
       this.selectedUser = user;
       try {
-        const response = await axios.post(`http://localhost:5000/api/users/${user.user_id}/reset-password`, {}, {
-          withCredentials: true
-        });
+        // Check if the user has a student_id field, otherwise use username
+        // For student users, we assume the username is their student ID
+        let studentId = user.student_id || user.username;
+
+        // If the role is student, ensure we're using the correct format for student ID
+        if (user.role === 'student') {
+          // Make sure the student ID is 13 digits
+          // If it's not in the correct format, we'll show an error
+          if (!/^\d{13}$/.test(studentId)) {
+            throw new Error('รหัสนักศึกษาไม่ถูกต้อง ต้องเป็นตัวเลข 13 หลัก');
+          }
+        } else {
+          // For non-student users, we'll need to prompt for an email
+          // This is a simplified approach - in a real app, you might want to store emails for all users
+          const email = prompt('กรุณาระบุอีเมลสำหรับส่งรหัสผ่านชั่วคราว:', '');
+          if (!email) {
+            throw new Error('ไม่ได้ระบุอีเมล กรุณาลองใหม่อีกครั้ง');
+          }
+          studentId = email;
+          // If it's a full email already, don't append the domain
+          if (email.includes('@')) {
+            // Send request with the provided email
+            const response = await axios.post(`http://localhost:5000/api/users/${user.user_id}/reset-password`,
+              { email: email },
+              { withCredentials: true }
+            );
+
+            if (response.data.success) {
+              this.resetPasswordResult = {
+                success: true,
+                username: user.username,
+                email: email
+              };
+              this.showResetPasswordModal = true;
+            }
+            return;
+          }
+        }
+
+        // Generate university email format: studentId@mail.rmutt.ac.th
+        const universityEmail = `${studentId}@mail.rmutt.ac.th`;
+
+        // Send request to backend with the email to send the temporary password to
+        const response = await axios.post(`http://localhost:5000/api/users/${user.user_id}/reset-password`,
+          { email: universityEmail },
+          { withCredentials: true }
+        );
 
         if (response.data.success) {
           this.resetPasswordResult = {
             success: true,
-            temporaryPassword: response.data.temporaryPassword,
-            username: user.username
+            username: user.username,
+            email: universityEmail
           };
           this.showResetPasswordModal = true;
         }
@@ -243,7 +291,7 @@ export default {
         console.error('Error resetting password:', error);
         this.resetPasswordResult = {
           success: false,
-          error: error.response?.data?.error || 'Error resetting password'
+          error: error.response?.data?.error || error.message || 'Error resetting password'
         };
         this.showResetPasswordModal = true;
       }
@@ -576,18 +624,33 @@ tbody td {
   margin-bottom: 1rem;
 }
 
-.temp-password {
-  font-size: 1.5rem;
+.email-sent {
+  font-size: 1.2rem;
   font-weight: bold;
   padding: 1rem;
   margin: 1rem 0;
   background-color: #f8f9fa;
   border-radius: var(--border-radius);
   border: 2px dashed var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.email-sent .svg-inline--fa {
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 
 .warning {
   color: var(--warning-color);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.info {
+  color: var(--primary-color);
   font-weight: 500;
   margin-top: 1rem;
 }

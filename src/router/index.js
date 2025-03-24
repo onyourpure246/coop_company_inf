@@ -14,7 +14,6 @@ import AdminCompanyManagement from "@/components/AdminCompanyManagement.vue";
 import Dashboard from '@/components/pages/DashboardPage.vue'
 import PrivacyPolicy from '@/components/PrivacyPolicy.vue'
 import ContactPage from "@/components/pages/ContactPage.vue";
-
 const routes = [
   {
     path: "/",
@@ -111,7 +110,7 @@ const routes = [
     name: 'Contact Us',
     component: ContactPage,
     meta: { public: true, title: 'ติดต่อเรา - งานสหกิจศึกษาสำหรับประชาสัมพันธ์สถานประกอบการ' }
-  }
+  },
 ];
 
 const router = createRouter({

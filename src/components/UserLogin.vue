@@ -79,10 +79,11 @@
         <button
           type="button"
           class="text-link mt-3"
-          @click="showChangePasswordModal = true"
+          @click="$router.push('/contact')"
         >
-          คลิกที่นี่ กรณีเข้าสู่ระบบครั้งแรก
+          ลืมรหัสผ่าน คลิกเพื่อกรุณาติดต่อเจ้าหน้าที่
         </button>
+         
       </div>
     </div>
 
