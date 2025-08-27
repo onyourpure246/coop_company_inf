@@ -1,14 +1,30 @@
-# coophelper
+# RMUTT Cooperative Education Supporter For Science and Technology Student
+
+## Project Clone
+```
+git clone https://github.com/onyourpure246/coop_company_inf.git
+```
 
 ## Project setup
-```
-npm install
-```
+1. Open Folder with Visual Studio Code
+2. Open backend folder and run
+   ```
+    npm install
+   ```
+3. Open frontend folder and run
+   ```
+    npm install
+   ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. Open backend folder and run
+   ```
+    npm start
+   ```
+2. Open frontend folder and run
+   ```
+    npm run serve
+   ```
 
 ### Compiles and minifies for production
 ```
